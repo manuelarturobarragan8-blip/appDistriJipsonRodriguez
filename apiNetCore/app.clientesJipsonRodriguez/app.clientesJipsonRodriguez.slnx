@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="app.clientesJipRodri.common/app.clientesJipRodri.common.csproj" Id="eff22b3e-b270-4ffd-9ee6-853ae74cd5d0" />
+  <Project Path="app.clientesJipRodri.dataAccess/app.clientesJipRodri.dataAccess.csproj" />
+  <Project Path="app.clientesJipRodri.entities/app.clientesJipRodri.entities.csproj" />
+  <Project Path="app.clientesJipRodri.services/app.clientesJipRodri.services.csproj" Id="8caf07be-49cd-4b52-9d6c-1c1074b52d0b" />
+  <Project Path="app.clientesJipsonRodriguez/app.clientesJipsonRodriguez.csproj" />
+</Solution>

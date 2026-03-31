@@ -1,0 +1,6 @@
+@app.JipsonRodriguez_HostAddress = http://localhost:5113
+
+GET {{app.JipsonRodriguez_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
