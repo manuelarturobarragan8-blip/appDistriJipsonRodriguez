@@ -1,5 +1,9 @@
+using app.clientesJipRodri.common.EventMQ;
 using app.clientesJipRodri.dataAccess.context;
 using app.clientesJipRodri.dataAccess.repositories;
+using app.clientesJipRodri.services.EventMQ;
+using app.clientesJipRodri.services.Implementations;
+using app.clientesJipRodri.services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +25,17 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 // Leer la configuración de RabbitMQ desde el appsettings.json y lo setea en la clase RabbitMQSettings
+builder.Services.Configure<RabbitMQSettings>(builder.Configuration.GetSection("rabbitmq"));
+
+
+//declarar servicio y repositorios
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IDireccionClienteRepository, DireccionClienteRepository>();
+
+builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<IDireccionClienteService, DireccionClienteService>();
+
+builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();
 
 var app = builder.Build();
 

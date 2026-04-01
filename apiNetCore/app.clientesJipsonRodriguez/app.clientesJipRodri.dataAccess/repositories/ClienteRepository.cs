@@ -1,10 +1,5 @@
 ﻿using app.clientesJipRodri.dataAccess.context;
 using app.clientesJipRodri.entities.models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace app.clientesJipRodri.dataAccess.repositories
 {
